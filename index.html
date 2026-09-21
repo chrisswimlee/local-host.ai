@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>LocalHost Agents</title>
+    <meta
+      name="description"
+      content="A local agent for Mac. On-device mind, local memory, open skills. Offline by default."
+    />
+    <meta property="og:title" content="LocalHost Agents" />
+    <meta
+      property="og:description"
+      content="A local agent that lives on your Mac. Open source. Coming soon."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://local-host.ai" />
+    <meta name="theme-color" content="#03120c" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="nav">
+        <a class="wordmark" href="/">local-host</a>
+        <nav class="nav-links">
+          <a href="https://github.com/chrisswimlee/local-host.ai">GitHub</a>
+          <a
+            class="pill"
+            href="mailto:hello@local-host.ai?subject=local-host.ai"
+            >Get notified</a
+          >
+        </nav>
+      </header>
+
+      <section class="hero">
+        <canvas
+          id="stars"
+          tabindex="0"
+          role="img"
+          aria-label="Interactive star field over dark water. Drag or use arrow keys to rotate, click to make ripples."
+        ></canvas>
+        <div class="hero-inner">
+          <p class="kicker reveal d1">LocalHost Agents</p>
+          <h1 class="reveal d2">
+            A new home for<br /><em>local</em> intelligence.
+          </h1>
+          <p class="lead reveal d3">
+            A local agent that lives on your Mac. It thinks on-device, remembers
+            on disk, and runs skills you can open — built for Apple silicon,
+            yours to inspect and run.
+          </p>
+          <div class="actions reveal d3">
+            <a
+              class="button primary"
+              href="https://github.com/chrisswimlee/local-host.ai"
+              >Watch the repo</a
+            >
+            <a
+              class="button ghost"
+              href="mailto:hello@local-host.ai?subject=local-host.ai"
+              >Get notified</a
+            >
+          </div>
+          <p class="date reveal d4">Coming soon for Mac · Sep 2026</p>
+        </div>
+      </section>
+
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="themes-kicker" id="intro-title">The idea</p>
+        <h2 class="intro-lead">
+          Hey. <span class="intro-host">localhost.</span>
+        </h2>
+        <p>
+          Everyone’s seen it if you’ve ever built anything. That address on
+          your machine. The one that means <em>here</em>, not someone else’s
+          server.
+        </p>
+        <p>
+          This is supposed to be yours. You own this code. You’re supposed to
+          own these agents. You host them. You run them. Everything on your
+          own computer.
+        </p>
+      </section>
+
+      <section class="runtime" aria-label="Preview of the local-host runtime">
+        <div class="mac reveal">
+          <div class="mac-bar">
+            <div class="traffic" aria-hidden="true">
+              <i class="close"></i>
+              <i class="min"></i>
+              <i class="max"></i>
+            </div>
+            <div class="mac-title">local-host · agent</div>
+          </div>
+          <pre class="terminal" id="terminal"></pre>
+        </div>
+      </section>
+
+      <section class="themes" aria-labelledby="themes-title">
+        <p class="themes-kicker" id="themes-title">The local agent</p>
+        <div class="principles">
+          <article class="card reveal">
+            <span class="index">01</span>
+            <h2>On-device mind</h2>
+            <p>
+              The agent reasons on your silicon. Models stay on the machine —
+              a rented GPU is never the default.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="index">02</span>
+            <h2>Local memory</h2>
+            <p>
+              Notes, context, and history live on disk. The agent remembers
+              with you, not in someone else’s cloud.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="index">03</span>
+            <h2>Open skills</h2>
+            <p>
+              Tools the agent uses are files you can read, fork, and change.
+              No black box between you and the work.
+            </p>
+          </article>
+          <article class="card reveal">
+            <span class="index">04</span>
+            <h2>Offline by default</h2>
+            <p>
+              Home is 127.0.0.1. The network is a choice you make — not a
+              requirement to wake the agent.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 LocalHost Agents</span>
+        <span>Local agent · Mac · 127.0.0.1</span>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,2 +1,3 @@
-# local-host.ai
-local-host.ai
+# LocalHost Agents
+
+A local agent for Mac.
