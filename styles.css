@@ -134,7 +134,7 @@ h1 {
   text-underline-offset: 3px;
 }
 
-.fluid {
+.project {
   width: 100%;
   margin-top: 28px;
   padding-top: 28px;
@@ -142,7 +142,11 @@ h1 {
   pointer-events: auto;
 }
 
-.fluid h2 {
+.project .kicker {
+  margin-bottom: 8px;
+}
+
+.project h2 {
   margin: 0 0 10px;
   font-family: var(--serif);
   font-size: 28px;
@@ -150,21 +154,21 @@ h1 {
   color: var(--gold);
 }
 
-.fluid p {
+.project p:not(.kicker) {
   margin: 0 0 18px;
   font-size: 16px;
   line-height: 1.55;
   color: var(--muted);
 }
 
-.fluid-links {
+.project-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
 
-.fluid-links a {
+.project-links a {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
@@ -176,7 +180,7 @@ h1 {
   font-size: 14px;
 }
 
-.fluid-links a:hover {
+.project-links a:hover {
   border-color: var(--gold);
 }
 
@@ -190,7 +194,7 @@ h1 {
     height: 64px;
   }
 
-  .fluid-links a {
+  .project-links a {
     flex: 1 1 calc(50% - 10px);
     justify-content: center;
     min-height: 44px;
