@@ -206,3 +206,256 @@ h1 {
     pointer-events: none;
   }
 }
+
+body.doc-page #stars {
+  pointer-events: none;
+  cursor: default;
+}
+
+.page.doc {
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+  max-width: 48rem;
+  gap: 0;
+  pointer-events: auto;
+  padding: 28px 20px calc(64px + env(safe-area-inset-bottom));
+}
+
+.page.doc h1 {
+  font-size: clamp(40px, 8vw, 64px);
+  margin: 0 0 16px;
+}
+
+.page.doc .lead {
+  max-width: 38rem;
+  margin-bottom: 12px;
+}
+
+.page.doc .lead a,
+.page.doc .block a:not(.btn) {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.mast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.brand-sm {
+  margin-bottom: 0;
+  padding: 5px 8px 4px;
+  border-radius: 10px;
+}
+
+.brand-sm img {
+  height: 40px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--gold);
+}
+
+.langs {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--sea);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(184, 176, 110, 0.28);
+  border-radius: 999px;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn:hover {
+  border-color: var(--gold);
+}
+
+.btn-solid {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #03120c;
+}
+
+.btn-solid:hover {
+  background: #f4d78a;
+  border-color: #f4d78a;
+  color: #03120c;
+}
+
+.shots {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 12px;
+  margin: 32px 0 8px;
+}
+
+.shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(184, 176, 110, 0.2);
+  border-radius: 14px;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.block {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(184, 176, 110, 0.2);
+}
+
+.block h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+.block h3 {
+  margin: 24px 0 12px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.block p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+
+.points {
+  margin: 0;
+  padding-left: 1.15em;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.points li + li {
+  margin-top: 8px;
+}
+
+.points strong {
+  color: var(--fg);
+}
+
+.get-cmd {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 14px 16px;
+  border: 1px solid rgba(184, 176, 110, 0.2);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.get-cmd code {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  color: var(--fg);
+}
+
+.cmd-copy {
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid rgba(184, 176, 110, 0.28);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cmd-copy:hover {
+  border-color: var(--gold);
+}
+
+.colophon {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(184, 176, 110, 0.2);
+}
+
+@media (max-width: 720px) {
+  .mast {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .shots,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .get-cmd {
+    flex-direction: column;
+  }
+
+  .actions .btn {
+    justify-content: center;
+  }
+}
