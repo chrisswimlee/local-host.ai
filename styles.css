@@ -78,17 +78,18 @@ a:focus-visible,
 .brand {
   display: flex;
   align-items: center;
-  background: #fff;
-  border-radius: 16px;
-  padding: 8px 12px 6px;
+  background: transparent;
+  border-radius: 22px;
+  padding: 0;
   line-height: 0;
   margin-bottom: 8px;
 }
 
 .brand img {
   display: block;
-  height: 88px;
+  height: 96px;
   width: auto;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35));
 }
 
 .kicker {
@@ -186,12 +187,12 @@ h1 {
 
 @media (max-width: 640px) {
   .brand {
-    border-radius: 12px;
-    padding: 6px 8px 4px;
+    border-radius: 18px;
+    padding: 0;
   }
 
   .brand img {
-    height: 64px;
+    height: 72px;
   }
 
   .project-links a {
@@ -249,12 +250,13 @@ body.doc-page #stars {
 
 .brand-sm {
   margin-bottom: 0;
-  padding: 5px 8px 4px;
+  padding: 0;
   border-radius: 10px;
 }
 
 .brand-sm img {
   height: 40px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
 .site-nav {
@@ -278,10 +280,11 @@ body.doc-page #stars {
 }
 
 .langs {
-  margin: 0 0 8px;
+  margin: 0 0 14px;
   font-family: var(--mono);
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
   color: var(--sea);
 }
 
@@ -290,6 +293,10 @@ body.doc-page #stars {
   flex-wrap: wrap;
   gap: 10px;
   margin: 18px 0 0;
+}
+
+.page:not(.doc) .actions {
+  justify-content: center;
 }
 
 .btn {
