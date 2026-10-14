@@ -228,6 +228,13 @@ if (canvas) {
     }
   });
 
+  // let the page's own controls touch the water
+  window.localHostRipple = (clientX, clientY) => {
+    if (reduceMotion) return;
+    const rect = canvas.getBoundingClientRect();
+    spawnRipple(clientX - rect.left, clientY - rect.top, true);
+  };
+
   window.addEventListener("resize", resize);
   resize();
 

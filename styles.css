@@ -185,6 +185,117 @@ h1 {
   border-color: var(--gold);
 }
 
+/* ---- story: why / how / what ---- */
+
+.story-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 6px 0 22px;
+}
+
+.story-tab[aria-selected="true"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #03120c;
+}
+
+.story-panel {
+  max-width: 32rem;
+  margin: 0 auto;
+  animation: story-in 0.3s ease both;
+}
+
+@keyframes story-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.chain {
+  max-width: 24rem;
+  margin: 0 auto 18px;
+  text-align: left;
+}
+
+.chain-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(184, 176, 110, 0.2);
+}
+
+.chain-step {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(184, 176, 110, 0.2);
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.chain-a {
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.chain-step.is-active,
+.chain-step.is-done {
+  color: var(--fg);
+}
+
+.chain-step.is-done .chain-a {
+  opacity: 1;
+}
+
+.chain-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.project p.chain-stats {
+  margin: 0;
+  font-size: 14px;
+}
+
+.story-rules {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--fg);
+}
+
+.story-rules li + li {
+  margin-top: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-panel {
+    animation: none;
+  }
+
+  .chain-step,
+  .chain-a {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .story-tab {
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 44px;
+  }
+}
+
 @media (max-width: 640px) {
   .brand {
     border-radius: 18px;
@@ -306,9 +417,18 @@ body.doc-page #stars {
   padding: 0 14px;
   border: 1px solid rgba(184, 176, 110, 0.28);
   border-radius: 999px;
+  background: transparent;
   color: var(--fg);
+  font-family: var(--font);
   text-decoration: none;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:focus-visible,
+.story-panel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .btn:hover {

@@ -60,6 +60,63 @@
         <a href="https://chrisswimlee.com" rel="author me">Chris Swim Lee</a>
       </p>
 
+      <section class="project story" aria-labelledby="story-title">
+        <p class="kicker">The philosophy</p>
+        <h2 id="story-title">A way of building software</h2>
+
+        <div class="story-tabs" role="tablist" aria-label="The local-host philosophy">
+          <button class="btn story-tab" type="button" role="tab" id="tab-why" aria-controls="panel-why" aria-selected="true">Why</button>
+          <button class="btn story-tab" type="button" role="tab" id="tab-how" aria-controls="panel-how" aria-selected="false" tabindex="-1">How</button>
+          <button class="btn story-tab" type="button" role="tab" id="tab-what" aria-controls="panel-what" aria-selected="false" tabindex="-1">What</button>
+        </div>
+
+        <div class="story-panel" role="tabpanel" id="panel-why" aria-labelledby="tab-why" tabindex="0">
+          <p>
+            Localhost is the name a computer uses for itself. Anything running
+            there stays on your machine.
+          </p>
+          <p>
+            I think AI is heading toward per-request pricing for everything, at
+            prices most people won't keep paying. I'd rather the software run on
+            the computer you already own.
+          </p>
+        </div>
+
+        <div class="story-panel" role="tabpanel" id="panel-how" aria-labelledby="tab-how" tabindex="0" hidden>
+          <p>
+            The AI makes one small decision at a time, and ordinary code handles
+            everything around it. A small decision is easy to check, and checked
+            decisions add up to a system that behaves the same way every time.
+          </p>
+          <div class="chain" data-chain>
+            <ol class="chain-steps" aria-label="Example: one caption as small decisions">
+              <li class="chain-step"><span>Is this a full sentence?</span><span class="chain-a">yes</span></li>
+              <li class="chain-step"><span>Which language is it?</span><span class="chain-a">Korean</span></li>
+              <li class="chain-step"><span>Translate into?</span><span class="chain-a">English</span></li>
+              <li class="chain-step"><span>Show it now?</span><span class="chain-a">yes</span></li>
+            </ol>
+            <div class="chain-foot">
+              <p class="chain-stats" aria-live="polite">
+                Example: one caption, <span data-chain-count>0</span> of 4 checked
+              </p>
+              <button class="btn" type="button" data-chain-run>Run</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-panel" role="tabpanel" id="panel-what" aria-labelledby="tab-what" tabindex="0" hidden>
+          <p>
+            local-host is how I build things, not only the name on them. Every
+            project here follows the same rules:
+          </p>
+          <ul class="story-rules">
+            <li>It runs on your computer.</li>
+            <li>You own it, and nothing is metered.</li>
+            <li>The AI only makes decisions small enough to check.</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="project" aria-labelledby="agent-title">
         <p class="kicker">Still coming</p>
         <h2 id="agent-title">A local agent</h2>
@@ -84,5 +141,6 @@
       }
     </script>
     <script src="./script.js"></script>
+    <script src="./story.js"></script>
   </body>
 </html>
