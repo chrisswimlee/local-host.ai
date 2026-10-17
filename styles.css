@@ -48,7 +48,8 @@ a:focus-visible,
   height: 100%;
   display: block;
   cursor: grab;
-  touch-action: none;
+  /* let a vertical swipe scroll the page; horizontal drags still turn the field */
+  touch-action: pan-y;
 }
 
 #stars.dragging {
@@ -383,6 +384,16 @@ body.doc-page #stars {
 .site-nav a {
   color: var(--muted);
   text-decoration: none;
+}
+
+.langs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.langs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .site-nav a:hover,
