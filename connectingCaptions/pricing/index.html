@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Pricing · Connecting Captions</title>
+    <meta
+      name="description"
+      content="Connecting Captions pricing: iPhone and iPad on the App Store, the direct Mac download with a 14-day trial, and the work license."
+    />
+    <meta name="author" content="Chris Swim Lee" />
+    <link rel="author" href="https://chrisswimlee.com" />
+    <meta property="og:title" content="Pricing · Connecting Captions" />
+    <meta
+      property="og:description"
+      content="Personal editions are a one-time purchase. Organizations add a named work license: $240 per Mac per year, $120 for schools, five Macs minimum."
+    />
+    <link rel="canonical" href="https://local-host.ai/connectingCaptions/pricing/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://local-host.ai/connectingCaptions/pricing/" />
+    <meta property="og:image" content="https://local-host.ai/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Theater captions: Hello. and 안녕." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pricing · Connecting Captions" />
+    <meta
+      name="twitter:description"
+      content="Personal editions are a one-time purchase. Organizations add a named work license: $240 per Mac per year, $120 for schools, five Macs minimum."
+    />
+    <meta name="twitter:image" content="https://local-host.ai/images/og.jpg" />
+    <meta name="theme-color" content="#03120c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .page.doc.pricing { max-width: 56rem; }
+      .page.doc.pricing > * { min-width: 0; max-width: 100%; }
+
+      .editions { display: grid; gap: 14px; margin-top: 4px; }
+      .edition {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 18px 32px;
+        padding: 22px;
+        border: 1px solid rgba(184, 176, 110, 0.2);
+        border-radius: 14px;
+        background: rgba(0, 0, 0, 0.28);
+      }
+      .edition.featured { border-color: rgba(232, 195, 106, 0.6); }
+      .edition-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+      .edition .kicker { margin: 0; }
+      .status { margin: 0; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; }
+      .status.now { color: var(--sea); }
+      .status.now::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 7px; border-radius: 50%; background: currentColor; vertical-align: 0.15em; }
+      .edition h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.1; }
+      .price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin: 0 0 8px; }
+      .amt { font-family: var(--serif); font-size: 48px; line-height: 1; color: var(--gold); font-variant-numeric: tabular-nums; }
+      .was { font-family: var(--serif); font-size: 26px; color: var(--muted); }
+      .unit { font-size: 14px; color: var(--muted); }
+      .launch { margin: 0 0 10px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--gold); }
+      .page.doc .edition p.desc { margin: 0 0 14px; font-size: 15px; line-height: 1.55; color: var(--muted); }
+      .rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(184, 176, 110, 0.2); }
+      .rows li { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 9px 0; border-bottom: 1px solid rgba(184, 176, 110, 0.2); font-size: 14px; }
+      .rows span { flex: 1 1 50%; min-width: 0; color: var(--muted); }
+      .rows b { font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+      .edition .points { font-size: 15px; }
+      .edition .actions { margin-top: 16px; }
+      .edition .fine { margin-top: 14px; }
+
+      .table-scroll { position: relative; overflow-x: auto; border: 1px solid rgba(184, 176, 110, 0.2); border-radius: 14px; background: rgba(0, 0, 0, 0.28); }
+      .compare { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+      .compare th, .compare td { padding: 10px 14px; border-bottom: 1px solid rgba(184, 176, 110, 0.2); vertical-align: middle; }
+      .compare thead th { text-align: center; font-weight: 500; line-height: 1.3; vertical-align: bottom; }
+      .compare thead th small { display: block; margin-top: 3px; font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--gold); }
+      .compare tbody th { text-align: left; font-weight: 400; color: var(--fg); }
+      .compare td { text-align: center; color: var(--muted); }
+      .compare tbody tr:last-child th, .compare tbody tr:last-child td { border-bottom: 0; }
+      .compare .group th { padding-top: 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sea); }
+      .compare .hl { background: rgba(232, 195, 106, 0.07); }
+      .compare .y { color: var(--gold); }
+      .compare td .status { display: inline; font-size: 11px; }
+
+      .estimate { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 32px; padding: 22px; border: 1px solid rgba(184, 176, 110, 0.2); border-radius: 14px; background: rgba(0, 0, 0, 0.28); }
+      .est-form { display: grid; gap: 14px; margin: 0; }
+      .est-form > label[for="macs"] { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: var(--sea); text-transform: uppercase; }
+      .stepper { display: flex; width: max-content; max-width: 100%; border: 1px solid rgba(184, 176, 110, 0.28); border-radius: 999px; overflow: hidden; }
+      .stepper button { width: 46px; min-height: 44px; border: 0; background: transparent; color: var(--fg); font-size: 18px; cursor: pointer; }
+      .stepper button:hover { color: var(--gold); }
+      .stepper input { width: 72px; border: 0; border-inline: 1px solid rgba(184, 176, 110, 0.28); background: transparent; color: var(--fg); text-align: center; font: 500 15px var(--mono); -moz-appearance: textfield; appearance: textfield; }
+      .stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+      .check { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 2px 10px; align-items: start; font-size: 15px; cursor: pointer; }
+      .check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--gold); }
+      .check small { grid-column: 2; font-size: 13px; color: var(--muted); }
+      .est-out { border-top: 1px solid rgba(184, 176, 110, 0.2); align-self: start; }
+      .est-row { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(184, 176, 110, 0.2); font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+      .est-row b { font-weight: 500; color: var(--fg); }
+      .est-row.total b { font-family: var(--serif); font-size: 32px; font-weight: 400; line-height: 1; color: var(--gold); }
+      .page.doc .est-out p.fine { margin: 10px 0 0; }
+
+      .faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px 32px; margin: 0; }
+      .faq div { min-width: 0; }
+      .faq dt { font-family: var(--serif); font-size: 21px; line-height: 1.2; }
+      .faq dd { margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+
+      @media (max-width: 720px) {
+        .edition, .estimate, .faq { grid-template-columns: minmax(0, 1fr); }
+        .edition, .estimate { padding: 18px; }
+      }
+    </style>
+  </head>
+  <body class="doc-page">
+    <a class="skip" href="#content">Skip to content</a>
+    <canvas id="stars" tabindex="-1" role="img" aria-hidden="true"></canvas>
+    <main id="content" class="page doc pricing">
+      <header class="mast">
+        <a class="brand brand-sm" href="/" aria-label="local-host.ai">
+          <img src="/logo.svg" alt="local-host.ai" width="141" height="141" />
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/">local-host.ai</a>
+          <a href="/connectingCaptions">Connecting Captions</a>
+          <a href="/connectingCaptions/pricing" aria-current="page">Pricing</a>
+          <a href="/connectingCaptions/license">For work</a>
+          <a href="https://chrisswimlee.com" rel="author me">Chris Swim Lee</a>
+        </nav>
+      </header>
+
+      <p class="kicker">Connecting Captions</p>
+      <h1>Pricing</h1>
+      <p class="lead">
+        Live captions and translation on your Mac, iPhone or iPad. Personal
+        editions are a one-time purchase. Organizations add a named work license.
+      </p>
+      <div class="actions">
+        <a class="btn btn-solid" href="https://github.com/chrisswimlee/connectingCaptions/releases/latest/download/Connecting-Captions.zip">Download the zip</a>
+        <a class="btn" href="#compare">Compare editions</a>
+        <a class="btn" href="/connectingCaptions/license">For work</a>
+      </div>
+
+      <section class="block" aria-labelledby="editions">
+        <h2 id="editions">Editions</h2>
+        <div class="editions">
+          <article class="edition featured">
+            <div>
+              <div class="edition-head">
+                <p class="kicker">Direct download</p>
+                <p class="status now">Available now</p>
+              </div>
+              <h3>Connecting Captions for Mac</h3>
+              <p class="price">
+                <s class="was"><span class="visually-hidden">Regular price </span>$49</s>
+                <span class="amt"><span class="visually-hidden">Launch price </span>$29</span>
+                <span class="unit">once</span>
+              </p>
+              <p class="launch">Launch week price. $49 after launch.</p>
+              <p class="desc">The full app. Try it free for 14 days, then buy a key.</p>
+              <div class="actions">
+                <a class="btn btn-solid" href="https://github.com/chrisswimlee/connectingCaptions/releases/latest/download/Connecting-Captions.zip">Download free trial</a>
+                <a class="btn" data-paddle-buy href="mailto:support@local-host.ai?subject=Connecting%20Captions%20personal%20key&amp;body=Name%3A%0A%0AHow%20many%20Macs%20%28up%20to%202%29%3A%0A">Buy a key</a>
+              </div>
+            </div>
+            <ul class="points">
+              <li>Theater, and captions in an overlay on top of any app</li>
+              <li>Any input, including a loopback device for system audio</li>
+              <li>Whisper, plus Apple Speech and Apple Translation</li>
+              <li>Types the translation into another app</li>
+              <li>One person, on up to two of their own Macs</li>
+              <li>Free updates for all of version 1</li>
+            </ul>
+          </article>
+
+          <article class="edition">
+            <div>
+              <div class="edition-head">
+                <p class="kicker">App Store</p>
+                <p class="status">Coming soon</p>
+              </div>
+              <h3>iPhone and iPad</h3>
+              <p class="price"><span class="amt">Free</span><span class="unit">to download</span></p>
+              <p class="desc">The first Listen runs until you tap Stop, with translation. Then unlock iPhone and iPad.</p>
+              <ul class="rows">
+                <li><span>iPhone and iPad unlock</span><b>$9.99 once</b></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Live captions on iPhone and iPad</li>
+                <li>A keyboard that types the latest caption line where you’re writing</li>
+                <li>Apple Speech and Apple Translation</li>
+              </ul>
+              <p class="fine">The Mac App Store app is the same $9.99 unlock: the microphone and the board. Overlay, loopback, and Whisper stay on the direct download.</p>
+            </div>
+          </article>
+
+          <article class="edition">
+            <div>
+              <div class="edition-head">
+                <p class="kicker">Work license</p>
+                <p class="status now">Available now</p>
+              </div>
+              <h3>For schools and companies</h3>
+              <p class="price"><span class="amt">$240</span><span class="unit">per Mac per year</span></p>
+              <p class="desc">$120 per Mac for schools. Five Macs minimum, so from $1,200 a year, or $600 for a school. Needed for any Mac an organization owns.</p>
+              <ul class="rows">
+                <li><span>Written SLA</span><b>$3,000 per organization per year</b></li>
+                <li><span>MDM / Jamf pkg</span><b>$2,500 once</b></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="points">
+                <li>Everything in the direct download</li>
+                <li><strong>Licensed to</strong> your organization, shown in the app</li>
+                <li>An offline signed key that never phones home</li>
+                <li>Security reports answered within 7 days</li>
+              </ul>
+              <div class="actions">
+                <a class="btn btn-solid" href="mailto:support@local-host.ai?subject=Connecting%20Captions%20commercial%20license&amp;body=Organization%3A%0A%0AMac%20count%20%285%20minimum%29%3A%0A%0ANamed%20license%20%24240%2FMac%2Fyear%20%28%24120%20for%20schools%29.%20Add%20written%20SLA%20%243%2C000%2Forganization%2Fyear%3F%20%28yes%2Fno%29%0A%0AInstaller%20package%20%242%2C500%20once%3F%20%28yes%2Fno%29%0A%0AAnything%20else%20IT%20or%20legal%20needs%3A%0A">Email to buy</a>
+                <a class="btn" href="/connectingCaptions/license">License details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="compare" aria-labelledby="compare-h">
+        <h2 id="compare-h">Compare editions</h2>
+        <div class="table-scroll">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">Feature</span></th>
+                <th scope="col">iPhone and iPad<small>$9.99 once</small></th>
+                <th scope="col">Mac App Store<small>$9.99 once</small></th>
+                <th scope="col" class="hl">Direct download<small>$29 launch week, then $49</small></th>
+                <th scope="col">Work license<small>$240 per Mac per year</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Availability</th><td><span class="status">App Store</span></td><td><span class="status">App Store</span></td><td class="hl"><span class="status now">Available now</span></td><td><span class="status now">Available now</span></td></tr>
+              <tr class="group"><th scope="rowgroup" colspan="5">Captions</th></tr>
+              <tr><th scope="row">Captions on iPhone and iPad</th><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td></tr>
+              <tr><th scope="row">Keyboard that types the latest line</th><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td></tr>
+              <tr><th scope="row">Theater on the Mac</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Overlay on top of other apps</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Types the translation into another app</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr class="group"><th scope="rowgroup" colspan="5">Audio and speech</th></tr>
+              <tr><th scope="row">Microphone</th><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Any input, including loopback</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Apple Speech and Apple Translation</th><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Whisper</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr class="group"><th scope="rowgroup" colspan="5">License</th></tr>
+              <tr><th scope="row">Devices</th><td>iPhone and iPad</td><td>Mac</td><td class="hl">Up to 2 of your Macs</td><td>Per Mac, 5 minimum</td></tr>
+              <tr><th scope="row">Schools</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td>$120 per Mac per year</td></tr>
+              <tr><th scope="row">Try before you buy</th><td>One full session</td><td>One full session</td><td class="hl">14-day trial</td><td>14-day trial</td></tr>
+              <tr><th scope="row">You pay</th><td>Once</td><td>Once</td><td class="hl">Once</td><td>Every year</td></tr>
+              <tr><th scope="row">Licensed to your organization</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not included</span></td><td><span class="y" aria-hidden="true">✓</span><span class="visually-hidden">Included</span></td></tr>
+              <tr><th scope="row">Written SLA</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td>$3,000 per organization per year</td></tr>
+              <tr><th scope="row">MDM / Jamf pkg</th><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td class="hl"><span aria-hidden="true">–</span><span class="visually-hidden">Not available</span></td><td>$2,500 once</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine" style="margin-top: 12px;">macOS 15 or later on Apple Silicon. The zip is notarized.</p>
+      </section>
+
+      <section class="block" aria-labelledby="estimate-h">
+        <h2 id="estimate-h">Work license estimate</h2>
+        <div class="estimate">
+          <form class="est-form" id="est">
+            <label for="macs">Number of Macs</label>
+            <div class="stepper">
+              <button type="button" id="minus" aria-label="One fewer Mac">−</button>
+              <input id="macs" type="number" min="1" max="10000" step="1" value="12" inputmode="numeric" />
+              <button type="button" id="plus" aria-label="One more Mac">+</button>
+            </div>
+            <label class="check" for="school">
+              <input type="checkbox" id="school" />
+              <span>School</span>
+              <small>$120 per Mac per year instead of $240</small>
+            </label>
+            <label class="check" for="sla">
+              <input type="checkbox" id="sla" />
+              <span>Written SLA</span>
+              <small>$3,000 per organization per year</small>
+            </label>
+            <label class="check" for="pkg">
+              <input type="checkbox" id="pkg" />
+              <span>MDM / Jamf pkg</span>
+              <small>$2,500 once</small>
+            </label>
+          </form>
+          <div class="est-out" aria-live="polite">
+            <div class="est-row"><span>Each year</span><b id="yearly">$2,880</b></div>
+            <div class="est-row"><span>One time</span><b id="once">$0</b></div>
+            <div class="est-row total"><span>First year</span><b id="first">$2,880</b></div>
+            <p class="fine" id="minnote" hidden>Billed for 5 Macs, the minimum.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="faq-h">
+        <h2 id="faq-h">Licensing questions</h2>
+        <dl class="faq">
+          <div>
+            <dt>Which license do I need?</dt>
+            <dd>A personal key covers Macs you own. Any Mac a school, company or other organization owns needs a work license. A teacher can use a personal key on their own Mac in class.</dd>
+          </div>
+          <div>
+            <dt>How many Macs does a personal key cover?</dt>
+            <dd>One person, on up to two of their own Macs. Work licenses are counted per Mac.</dd>
+          </div>
+          <div>
+            <dt>What does paying once include?</dt>
+            <dd>The direct download is yours to keep, with free updates for all of version 1. App Store unlocks stay unlocked on the devices that use your Apple Account.</dd>
+          </div>
+          <div>
+            <dt>How does the trial work?</dt>
+            <dd>Download the zip and use everything for 14 days. After that, paste a key under Settings → General. The key is an offline signed key and never phones home.</dd>
+          </div>
+          <div>
+            <dt>Does my voice leave the Mac?</dt>
+            <dd>No, unless someone turns on a cloud speech model. Speech and translation run on the device.</dd>
+          </div>
+          <div>
+            <dt>How long is the launch price?</dt>
+            <dd>The direct download is $29 during launch week. After that it is $49.</dd>
+          </div>
+        </dl>
+        <p class="fine" style="margin-top: 22px;">
+          Prices in US dollars, before tax. Custom overlay, glossary, or fleet work is
+          <a href="https://chrisswimlee.com/engage/" style="color: var(--gold);">Engage</a>, not this license.
+        </p>
+      </section>
+
+      <p class="fine" style="margin-top: 22px;">
+        <a href="/connectingCaptions/terms" style="color: var(--gold);">Terms</a> · <a href="/connectingCaptions/privacy" style="color: var(--gold);">Privacy</a> · <a href="/connectingCaptions/refunds" style="color: var(--gold);">Refunds</a> · Orders are processed by Paddle, our Merchant of Record. Questions: <a href="mailto:support@local-host.ai" style="color: var(--gold);">support@local-host.ai</a>
+      </p>
+
+      <footer class="byline colophon">
+        A project from
+        <a href="/">local-host.ai</a>
+        by
+        <a href="https://chrisswimlee.com" rel="author me">Chris Swim Lee</a>
+      </footer>
+    </main>
+    <script src="/script.js"></script>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script>
+      // Paddle checkout for the $49 personal key. The token is a public client-side token.
+      // During Show HN week set LAUNCH_DISCOUNT_CODE to the Paddle code (e.g. "SHOWHN"); leave "" after.
+      (function () {
+        var PADDLE_TOKEN = "live_619235d740d7c6a15b1fd7df8ed";
+        var PERSONAL_PRICE_ID = "pri_01m5vhcet3gp2wxbdz61p4awm4";
+        var LAUNCH_DISCOUNT_CODE = "";
+        try { if (window.Paddle) window.Paddle.Initialize({ token: PADDLE_TOKEN }); } catch (e) {}
+        document.querySelectorAll("[data-paddle-buy]").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            if (!window.Paddle || !window.Paddle.Checkout) return;
+            event.preventDefault();
+            var options = { items: [{ priceId: PERSONAL_PRICE_ID, quantity: 1 }] };
+            if (LAUNCH_DISCOUNT_CODE) options.discountCode = LAUNCH_DISCOUNT_CODE;
+            window.Paddle.Checkout.open(options);
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var $ = function (id) { return document.getElementById(id); };
+        var fmt = function (n) { return "$" + n.toLocaleString("en-US"); };
+        function read() {
+          var v = parseInt($("macs").value, 10);
+          return Number.isFinite(v) && v > 0 ? Math.min(v, 10000) : 0;
+        }
+        function calc() {
+          var n = read();
+          var billed = Math.max(5, n);
+          var rate = $("school").checked ? 120 : 240;
+          var yearly = billed * rate + ($("sla").checked ? 3000 : 0);
+          var once = $("pkg").checked ? 2500 : 0;
+          $("yearly").textContent = fmt(yearly);
+          $("once").textContent = fmt(once);
+          $("first").textContent = fmt(yearly + once);
+          $("minnote").hidden = n >= 5;
+        }
+        $("macs").addEventListener("input", calc);
+        $("sla").addEventListener("change", calc);
+        $("pkg").addEventListener("change", calc);
+        $("school").addEventListener("change", calc);
+        $("minus").addEventListener("click", function () { $("macs").value = Math.max(1, (read() || 5) - 1); calc(); });
+        $("plus").addEventListener("click", function () { $("macs").value = Math.min(10000, (read() || 4) + 1); calc(); });
+        $("est").addEventListener("submit", function (e) { e.preventDefault(); });
+        calc();
+      })();
+    </script>
+  </body>
+</html>

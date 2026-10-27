@@ -15,29 +15,36 @@
       property="og:description"
       content="On-device live captions on a Mac. Voice stays on the machine. No cloud required unless you turn it on."
     />
+    <link rel="canonical" href="https://local-host.ai/connectingCaptions/" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://local-host.ai/connectingCaptions" />
-    <meta property="og:image" content="https://local-host.ai/images/fluidsubtitles.jpg" />
+    <meta property="og:url" content="https://local-host.ai/connectingCaptions/" />
+    <meta property="og:image" content="https://local-host.ai/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Theater captions: Hello. and 안녕." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Connecting Captions — Live On-Device Captions for Mac" />
+    <meta
+      name="twitter:description"
+      content="On-device live captions on a Mac. Voice stays on the machine. No cloud required unless you turn it on."
+    />
+    <meta name="twitter:image" content="https://local-host.ai/images/og.jpg" />
     <meta name="theme-color" content="#03120c" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="doc-page">
+    <a class="skip" href="#content">Skip to content</a>
     <canvas
       id="stars"
       tabindex="-1"
       role="img"
       aria-hidden="true"
     ></canvas>
-    <div class="page doc">
+    <main id="content" class="page doc">
       <header class="mast">
         <a class="brand brand-sm" href="/" aria-label="local-host.ai">
           <img src="/logo.svg" alt="local-host.ai" width="141" height="141" />
@@ -62,8 +69,14 @@
         cloud speech model. Theater doesn’t call home. No account. No telemetry.
       </p>
       <p class="langs">Arabic · Chinese · Danish · Dutch · English · Finnish · French · German · Hebrew · Hindi · Indonesian · Italian · Japanese · Korean · Malay · Norwegian · Polish · Portuguese · Russian · Spanish · Swedish · Thai · Turkish · Ukrainian · Vietnamese</p>
+      <p class="fine">
+        The 25 names are the translation list. What you can speak depends on
+        the engine and the speech assets on this Mac. Thai needs offline Apple
+        recognition, or a Whisper model that lists Thai.
+      </p>
       <div class="actions">
         <a class="btn btn-solid" href="https://github.com/chrisswimlee/connectingCaptions/releases/latest/download/Connecting-Captions.zip">Download Connecting Captions</a>
+        <a class="btn btn-solid" href="/connectingCaptions/pricing">iPhone and iPad, $9.99</a>
         <a class="btn btn-solid" href="/connectingCaptions/license">For work: prices</a>
         <a class="btn" href="https://github.com/chrisswimlee/connectingCaptions" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="btn" href="/">local-host.ai</a>
@@ -72,18 +85,18 @@
       <div class="shots">
         <figure class="shot">
           <img
-            src="/images/fluidsubtitles.jpg"
-            alt="Theater captions: Hello. and 안녕."
-            width="1200"
-            height="750"
+            src="/images/theater.jpg"
+            alt="Theater captions: Hello. in mint, with 안녕. beneath it."
+            width="1600"
+            height="1000"
           />
         </figure>
         <figure class="shot">
           <img
-            src="/images/fluidsubtitles-home.jpg"
-            alt="Theater Home: English to Korean, on this Mac."
-            width="1200"
-            height="750"
+            src="/images/theater-home.jpg"
+            alt="Theater Home: English to Korean with Apple Speech, ready on this Mac."
+            width="1600"
+            height="1000"
           />
         </figure>
       </div>
@@ -97,7 +110,7 @@
           </li>
           <li>
             <strong>Bilingual rooms.</strong>
-            Speak any of the 25 languages. The other side sees a caption or a
+            Speak from that list. The other side sees a caption or a
             translation.
           </li>
           <li>
@@ -110,13 +123,13 @@
 
       <section class="block" id="install">
         <h2>Install</h2>
-        <p>macOS 15 or later. Theater streaming needs Apple Silicon. The zip is notarized.</p>
+        <p>macOS 15 or later on Apple Silicon. The zip is notarized. Speech Analyzer, the newer Apple Speech, needs macOS 26.</p>
         <div class="actions">
           <a class="btn btn-solid" href="https://github.com/chrisswimlee/connectingCaptions/releases/latest/download/Connecting-Captions.zip">Download Connecting Captions</a>
         </div>
         <ol class="points">
           <li>Unzip Connecting-Captions.zip and drag Connecting Captions to Applications.</li>
-          <li>Open Theater, allow the microphone, then press Listen.</li>
+          <li>Open Connecting Captions, then Theater. Allow the microphone, then press Listen.</li>
         </ol>
         <h3 id="homebrew">Homebrew</h3>
         <div class="get-cmd">
@@ -138,7 +151,8 @@ brew install --cask connectingcaptions</code>
           <h2>What it is</h2>
           <ul class="points">
             <li>A Theater window over slides. A whole-screen Zoom or Meet share includes it. Share the slides window when viewers should not see the captions.</li>
-            <li>On-device Apple Translation. Speech recognition comes from FluidVoice.</li>
+            <li>Apple Translation on this Mac. Apple Speech is the default: Speech Analyzer on macOS 26, and the older Apple Speech before that.</li>
+            <li>The speech engine comes from FluidVoice. Whisper and other models are optional downloads in Voice Engine.</li>
             <li>Voice stays on this Mac. A cloud speech model is something you turn on.</li>
             <li>No account, no telemetry, no captions uploaded. Works offline once models are on disk.</li>
           </ul>
@@ -146,7 +160,7 @@ brew install --cask connectingcaptions</code>
         <section class="block">
           <h2>What you need</h2>
           <ul class="points">
-            <li>macOS 15 or later. Theater streaming needs Apple Silicon.</li>
+            <li>macOS 15 or later on Apple Silicon. Speech Analyzer needs macOS 26.</li>
             <li>Microphone for Listen. Accessibility only if you type into another app.</li>
           </ul>
         </section>
@@ -155,15 +169,12 @@ brew install --cask connectingcaptions</code>
       <section class="block" id="work">
         <h2>For work</h2>
         <p>
-          Personal use stays free. A named license is $60 per Mac per year, five
-          Macs minimum. IT can see the prices without emailing for a quote.
+          Listen runs for 14 days from the first Listen, then needs a key. A personal key is $49 once, or $29 during launch week, for up to two Macs you own. A work license is $240 per Mac per year, or $120 for schools, five Macs minimum, when an organization owns the Mac.
         </p>
         <ul class="points">
           <li>
             <strong>How does this monetize?</strong>
-            Named license $60 per Mac per year, five Macs minimum. Written SLA
-            +$90 per Mac per year. MDM pkg $1,500 once. Transcripts, voiceprints,
-            and training data are not part of the sale.
+            Personal key $49 once after a 14-day trial, $29 during launch week. Work license $240 per Mac per year, $120 for schools, five Macs minimum. Written SLA $3,000 per organization per year. Installer package $2,500 once. Transcripts, voiceprints, and training data are not part of the sale.
           </li>
           <li>
             <strong>Does voice leave this Mac?</strong>
@@ -173,23 +184,48 @@ brew install --cask connectingcaptions</code>
           </li>
           <li>
             <strong>Who fixes a break?</strong>
-            Security reports get a reply within 7 days. A paid license can add a
+            Security reports get a reply within 7 days. The
+            <a href="https://github.com/chrisswimlee/connectingCaptions/blob/main/SECURITY.md">security policy</a>
+            covers scope and the unsandboxed build. A paid license can add a
             written SLA.
           </li>
         </ul>
         <div class="actions">
           <a class="btn btn-solid" href="/connectingCaptions/license">For work: prices</a>
-          <a class="btn" href="mailto:suyoung.lee99@gmail.com?subject=Connecting%20Captions%20commercial%20license&amp;body=Organization%3A%0A%0AMac%20count%20%285%20minimum%29%3A%0A%0ANamed%20license%20%2460%2FMac%2Fyear.%20Add%20written%20SLA%20%2B%2490%2FMac%2Fyear%3F%20%28yes%2Fno%29%0A%0AMDM%20%2F%20Jamf%20pkg%20%241%2C500%20once%3F%20%28yes%2Fno%29%0A%0AAnything%20else%20IT%20or%20legal%20needs%3A%0A">Email to buy</a>
+          <a class="btn" href="mailto:support@local-host.ai?subject=Connecting%20Captions%20commercial%20license&amp;body=Organization%3A%0A%0AMac%20count%20%285%20minimum%29%3A%0A%0ANamed%20license%20%24240%2FMac%2Fyear%20%28%24120%20for%20schools%29.%20Add%20written%20SLA%20%243%2C000%2Forganization%2Fyear%3F%20%28yes%2Fno%29%0A%0AInstaller%20package%20%242%2C500%20once%3F%20%28yes%2Fno%29%0A%0AAnything%20else%20IT%20or%20legal%20needs%3A%0A">Email to buy</a>
         </div>
       </section>
 
-      <p class="byline colophon">
+      <footer class="byline colophon">
         A project from
         <a href="/">local-host.ai</a>
         by
         <a href="https://chrisswimlee.com" rel="author me">Chris Swim Lee</a>
-      </p>
-    </div>
+      </footer>
+    </main>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Connecting Captions",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 15 or later, Apple Silicon",
+        "url": "https://local-host.ai/connectingCaptions/",
+        "downloadUrl": "https://github.com/chrisswimlee/connectingCaptions/releases/latest/download/Connecting-Captions.zip",
+        "image": "https://local-host.ai/images/og.jpg",
+        "description": "On-device live captions on a Mac. Speech and translation stay on the machine unless you turn on a cloud speech model.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Chris Swim Lee",
+          "url": "https://chrisswimlee.com"
+        }
+      }
+    </script>
     <script src="/script.js"></script>
     <script src="/copy.js"></script>
   </body>
